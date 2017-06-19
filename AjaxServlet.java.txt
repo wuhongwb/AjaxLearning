@@ -16,16 +16,17 @@ public class AjaxServlet extends HttpServlet {
 		
 		
 		
-		
 		String username = request.getParameter("username");
+		String callback = request.getParameter("callback");
 		response.setCharacterEncoding("UTF-8");
+		response.setHeader("Access-Control-Allow-Origin", "*");
 		PrintWriter out = response.getWriter();
 		if("1".equals(username))
 		{
-			out.println("right");
+			out.println("{\"success\":true,\"msg\":\""+username+"\"}");
 		}
 		else{
-			out.println("wrong  "+username);
+			out.println("{\"success\":false,\"msg\":\""+username+"\"}");
 			}
 	}
 

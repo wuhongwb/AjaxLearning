@@ -79,10 +79,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 }
 
                 var username = $(this).val();
-                xhr.open("post","http://localhost:8080/try/AjaxServlet",true);
-                xhr.setRequestHeader("Content-Type" , "application/x-www-form-urlencoded");
-                var data = new FormData;
-                data.append("username","1");
+                xhr.open("post","http://127.0.0.1:8080/try/AjaxServlet",true);
+                //xhr.setRequestHeader("Content-Type" , "application/x-www-form-urlencoded");
+                //var data = new FormData;
+                //data.append("username","1");
                 xhr.send($("#username").serialize());
             });
             
